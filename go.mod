@@ -4,9 +4,11 @@ require (
 	cloud.google.com/go v0.24.0
 	contrib.go.opencensus.io/exporter/stackdriver v0.5.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/euskadi31/go-tokenizer v0.0.0-20180318172036-8b5faeae2841
 	github.com/golang/protobuf v1.1.0 // indirect
 	github.com/googleapis/gax-go v2.0.0+incompatible // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
+	github.com/stretchr/objx v0.1.1 // indirect
 	github.com/stretchr/testify v1.2.2
 	go.opencensus.io v0.15.0 // indirect
 	golang.org/x/net v0.0.0-20180811021610-c39426892332
@@ -17,4 +19,5 @@ require (
 	google.golang.org/appengine v1.1.0 // indirect
 	google.golang.org/genproto v0.0.0-20180808183934-383e8b2c3b9e
 	google.golang.org/grpc v1.14.0 // indirect
+	gopkg.in/neurosnap/sentences.v1 v1.0.6
 )
