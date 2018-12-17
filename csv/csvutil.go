@@ -16,6 +16,9 @@ func ExtractColumnGroupedBy(filename, columnName, groupColumn string, groupFilte
 	}
 	fileContent := string(fileBytes)
 	lines := strings.Split(fileContent, "\n")
+	for i := range lines {
+		lines[i] = strings.TrimRight(lines[i], "\r")
+	}
 	headers := strings.Split(lines[0], ";")
 	colIdx := sliceutil.IndexOf(headers, columnName)
 	if colIdx < 0 {

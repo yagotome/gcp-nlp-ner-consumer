@@ -29,3 +29,9 @@ func SplitByPunctuation(s string) []string {
 	}
 	return newArr
 }
+
+// EscapeGroup ...
+func EscapeGroup(group string) string {
+	r := regexp.MustCompile(`[/\\]`)
+	return r.ReplaceAllString(group, "-")
+}
