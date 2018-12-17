@@ -8,6 +8,11 @@ This is an application to read a CSV of texts to have entities extracted and req
 You'll need Go v1.11 to run.
 
 
+## Setup
+
+Add the CSV file containg sentences to have entities extracted in `input` folder. By default, it is expected a file `input/file.csv`, but you can change it in [main](cmd/createtsv/main.go).
+
+
 ## Running
 
 To run project, first set environment variable GOOGLE_APPLICATION_CREDENTIALS to credentials path:

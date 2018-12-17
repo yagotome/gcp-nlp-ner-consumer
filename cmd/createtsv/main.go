@@ -9,7 +9,6 @@ import (
 	"sync"
 	"time"
 
-	"github.com/euskadi31/go-tokenizer"
 	"github.com/yagotome/gcp-nlp-ner-consumer/csv"
 	"github.com/yagotome/gcp-nlp-ner-consumer/nlp"
 )
@@ -17,8 +16,6 @@ import (
 func main() {
 	log.Println("Starting processing...")
 	groupedSentences := getGroupedSentences()
-
-	groupedSentences = map[string][]string{"Roubos em Geral": []string{"Roubaram meu carro. Na Barra da Tijuca, em frente ao Barra Shopping! Incidente ocorreu hoje de manhã, 10:30."}}
 
 	for group, sentences := range groupedSentences {
 		createTsv(group, sentences)
@@ -80,7 +77,7 @@ func createTsv(group string, sentences []string) {
 
 func getGroupedSentences() map[string][]string {
 	subjectFilter := []string{"Roubos em Geral", "Roubo carga/ veículo", "Tráfico de drogas", `Tráfico de Drogas \ Armas`, "Homicidio", "Homicídios", "Armas"}
-	groupedSentences, err := csv.ExtractColumnGroupedBy("app_dd.csv", "relato", "assunto", subjectFilter)
+	groupedSentences, err := csv.ExtractColumnGroupedBy("input/file.csv", "relato", "assunto", subjectFilter)
 	if err != nil {
 		log.Fatal(err)
 	}
